@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://joiywtkjo1ox"]
+
+[ext_resource type="Script" uid="uid://crjufs0vo3qa4" path="res://node_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://6xb27jilfft2" path="res://ambulance.jpg" id="1_wtcfe"]
+
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_0e48y"]
+
+[node name="Node2D" type="Node2D" unique_id=1991935375]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2007525764]
+position = Vector2(1000, 324)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_wtcfe")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite2D" unique_id=2113281341]
+stream = SubResource("AudioStreamGenerator_0e48y")
+script = ExtResource("1_0e48y")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=301087987]
+position = Vector2(100, 324)
